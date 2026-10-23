@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide d'achat — Wiki Kymco Agility 50 4T</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="nav"></nav>
+<script src="nav.js"></script>
+
+<main>
+  <h1>Guide d'achat [What to Buy]</h1>
+  <p class="subtitle">Avant de choisir un modèle, choisissez un usage. Une moto est un outil, pas un trophée — la bonne est celle qui résout <em>votre</em> problème de transport, au coût que vous pouvez tenir pendant des années.</p>
+
+  <!-- 1. Pourquoi -->
+  <h2 id="pourquoi">1. Demandez-vous d'abord : pourquoi ? [Start with why]</h2>
+  <p>Trois questions suffisent à éliminer la majorité des mauvais achats :</p>
+  <table>
+    <thead>
+      <tr><th>Question</th><th>Réponses possibles</th><th>Ce que ça change</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Pour quoi faire ?</strong></td>
+        <td>Ville &bull; voyage / route &bull; tout-terrain &bull; mixte</td>
+        <td>Ville = léger, automatique, rangement. Route = stabilité, protection au vent, cylindrée. Tout-terrain = garde au sol, suspensions, pneus mixtes.</td>
+      </tr>
+      <tr>
+        <td><strong>À quelle fréquence ?</strong></td>
+        <td>Week-ends &bull; quotidien &bull; quotidien intensif (livraison, travail)</td>
+        <td>Plus l'usage est fréquent, plus la fiabilité, la consommation et le prix des pièces pèsent plus lourd que le plaisir.</td>
+      </tr>
+      <tr>
+        <td><strong>Avec quoi ?</strong></td>
+        <td>Seul &bull; passager &bull; bagages / courses</td>
+        <td>Un passager régulier exige de la puissance, de bons freins et une selle adaptée ; les bagages, un top-case ou un coffre (voir <a href="equipement.html#topcase">Équipement</a>).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 2. Coût de possession -->
+  <h2 id="cout-possession">2. Le vrai prix : le coût de possession [Total cost of ownership]</h2>
+  <p>Le prix d'achat ne se paie qu'une fois ; le reste tombe chaque mois. Ramenez tout à une <strong>mensualité</strong> pour comparer honnêtement deux modèles :</p>
+
+  <div class="callout callout-info">
+    <strong>Coût mensuel = assurance annuelle ÷ 12 + carburant du mois + entretien et pièces du mois</strong>
+    Carburant du mois = km/mois × consommation (L/100 km) ÷ 100 × prix du litre.<br>
+    Entretien et pièces du mois = km/mois × coût d'entretien au km (vidanges, courroie, galets, pneus, freins, bougie, filtres).
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Poste (exemple : Agility 50 4T, 500 km/mois)</th><th>Calcul</th><th>≈ / mois</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Assurance</strong></td><td>1 490 dhs / 12 (<a href="assurance.html">page Assurance</a>)</td><td><strong>~124 dhs</strong></td></tr>
+      <tr><td><strong>Carburant</strong></td><td>500 km × 2 L/100 km = 10 L × ~14 dhs/L</td><td><strong>~140 dhs</strong></td></tr>
+      <tr><td><strong>Entretien + usure</strong></td><td>500 km × ~0,20 dhs/km (vidange tous les 2 000 km, courroie, galets, pneus… voir <a href="maintenance.html">Maintenance</a>)</td><td><strong>~100 dhs</strong></td></tr>
+      <tr><td colspan="2"><strong>Total</strong></td><td><strong>~360 dhs / mois</strong></td></tr>
+    </tbody>
+  </table>
+  <p style="color:var(--text-muted);font-size:0.9em;">⚠️ Estimations : le prix du litre et le coût au km sont des hypothèses arrondies — remplacez-les par vos chiffres. Le principe compte plus que le résultat : faites le même calcul pour chaque modèle envisagé avant de comparer les prix d'achat. Un 125 cc consomme et coûte plus en assurance et en pièces ; un modèle sans réseau local coûte plus cher en immobilisation.</p>
+
+  <!-- 3. Assistant IA -->
+  <h2 id="assistant-ia">3. Se faire conseiller par une IA [Ask an AI advisor]</h2>
+  <p>Le prompt ci-dessous transforme un assistant IA (Claude, ChatGPT…) en conseiller d'achat impartial pour le marché marocain. Remplissez d'abord votre besoin : il sera placé <strong>en tête du message</strong>, ce qui évite à l'IA de reposer des questions auxquelles vous avez déjà répondu.</p>
+
+  <div class="card" style="margin:1rem 0;">
+    <h3 style="margin-bottom:0.75rem;">Mon besoin [My need]</h3>
+    <p style="margin-bottom:0.5rem;">
+      Je veux un
+      <select id="bg-type" aria-label="Type de véhicule">
+        <option value="">— type —</option>
+        <option>scooter 50 cc</option>
+        <option>scooter 125 cc</option>
+        <option>moto routière</option>
+        <option>trail / moto d'aventure</option>
+        <option>je ne sais pas encore</option>
+      </select>
+      pour
+      <select id="bg-use" aria-label="Usage">
+        <option value="">— usage —</option>
+        <option>la ville</option>
+        <option>le voyage / la route</option>
+        <option>le tout-terrain</option>
+        <option>un usage mixte</option>
+      </select>,
+      utilisation
+      <select id="bg-freq" aria-label="Fréquence">
+        <option value="">— fréquence —</option>
+        <option>les week-ends</option>
+        <option>quotidienne</option>
+        <option>quotidienne intensive</option>
+      </select>.
+    </p>
+    <p style="margin-bottom:0.5rem;">
+      Budget d'achat : <input id="bg-budget" type="text" inputmode="numeric" placeholder="ex. 17 000" size="9" aria-label="Budget d'achat"> dhs
+      &nbsp;&bull;&nbsp; Ville : <input id="bg-city" type="text" placeholder="ex. Marrakech" size="11" aria-label="Ville">
+    </p>
+    <p style="margin-bottom:0.75rem;">
+      <label for="bg-extra">Précisions (expérience, taille, passager…) :</label><br>
+      <input id="bg-extra" type="text" style="width:100%;" placeholder="ex. débutant, 1,75 m, passager le week-end">
+    </p>
+    <button id="bg-copy" class="theme-btn" type="button" style="width:auto;padding:0.4rem 0.9rem;">Copier mon besoin + le prompt</button>
+    <span id="bg-status" style="margin-left:0.5rem;color:var(--text-muted);font-size:0.9em;" aria-live="polite"></span>
+    <p id="bg-preview" style="margin-top:0.75rem;color:var(--text-muted);font-size:0.9em;"></p>
+  </div>
+
+  <h3 id="prompt">Le prompt [The prompt]</h3>
+  <pre id="bg-prompt" style="white-space:pre-wrap;word-wrap:break-word;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:1rem;font-size:0.82rem;line-height:1.5;max-height:28rem;overflow:auto;">IDENTITY
+You are Moto Assistant, an impartial motorcycle and scooter buying advisor for the Moroccan market. You are an experienced rider, mechanic and ownership advisor — not a salesperson. Your goal is a purchase the rider will still be happy with, and able to afford, in 5 years.
+
+CORE RULES
+- A motorcycle is a tool, not a trophy. Recommend the bike that fits the rider's real life, never the one that is bigger, faster, newer, more expensive or better looking.
+- Optimize, in this order: safety and physical fit > suitability for actual use > reliability > total cost of ownership > parts and service availability in Morocco > resale value > preferences.
+- Never recommend a bike that is affordable to buy but hard to maintain or insure.
+- Never invent specifications or prices. Label every claim: ✅ verified fact, ⚠️ estimate, 💬 opinion. If unsure, say "I'm not certain about this."
+
+START OF CONVERSATION
+- The user's first message may begin with a summary of their need (type, use, frequency, budget, city, details). Treat every item there as already answered — never ask it again.
+- Reply in the language the user writes in (French, Arabic/Darija or English). Only ask which language they prefer if it is genuinely unclear.
+
+INTERVIEW (only what is still missing)
+Ask 2–4 questions per message, in at most 3 rounds, skipping anything irrelevant. Cover:
+1. Rider: licence held (and whether the bike requires a different category), experience, previous bikes, confidence.
+2. Use: % city / highway / rural / off-road, daily distance, passenger and luggage frequency, road quality, heat, dust, rain, parking.
+3. Body: height, weight, any back, knee or wrist issues → ideal seat height, maximum manageable weight, riding position.
+4. Money: purchase budget AND monthly ownership budget (insurance, fuel, maintenance, gear). Remind them that most riders underestimate ownership costs.
+5. Ownership: automatic or manual, maintenance involvement (minimal / servicing only / enjoys wrenching), trusted mechanic or dealer nearby, willingness to import parts.
+6. Priorities: ask them to rank their top 5 (reliability, comfort, economy, storage, looks, performance, technology, resale, simplicity…).
+Do not recommend until you know at least: licence/experience, main use and frequency, height, purchase budget and monthly budget. If something is still missing, state your assumption explicitly.
+
+DECISION ENGINE (internal — show only if asked)
+Score candidates: rider fit 25%, intended use 20%, reliability 15%, budget fit 15%, maintenance cost 10%, availability in Morocco 10%, preferences 5%. A bike that fails on safety or physical fit is rejected whatever its other scores.
+
+ANSWER FORMAT
+🥇 Best match — why it fits, strengths, compromises.
+🥈 2–3 alternatives — what the rider gains and loses with each.
+❌ Rejected options — one line each (too powerful, too heavy, poor parts supply, high upkeep, weak resale…).
+💰 Monthly ownership cost — insurance ÷ 12 + fuel (km/month × L/100 km × price per litre) + maintenance and wear parts; show the figures and mark estimates.
+🇲🇦 Moroccan reality — dealer network, independent mechanics, parts, resale, fuel, road, traffic and climate suitability.
+📈 Outlook — will it still suit them after 6 months, 2 years, 5 years? If they will outgrow it, say so.
+
+OTHER MODELS
+Prefer models sold and supported in Morocco. If the user asks about another model, evaluate it with the same framework and explain the extra ownership burden (parts, expertise, resale) rather than dismissing it.
+
+FINAL PRINCIPLE
+Between an exciting choice and a sensible one, choose the sensible one unless the user's answers clearly justify otherwise.</pre>
+
+  <div class="callout callout-warning">
+    <strong>L'IA conseille, elle ne vérifie pas</strong>
+    Prix, disponibilité et catégorie de permis changent : vérifiez chez le concessionnaire (voir <a href="parts.html#ateliers">ateliers recommandés</a>), sur <a href="manuals.html#external-tools">Avito</a> pour l'occasion, et sur la page <a href="permis.html">Permis</a> avant de signer.
+  </div>
+
+</main>
+
+<footer>
+  Kymco Agility 50 4T — Wiki d'entretien Marrakech &bull; Dernière mise à jour : <time datetime="2026-10-23">23 octobre 2026</time>
+</footer>
+
+<script>
+(function() {
+  function val(id) { return document.getElementById(id).value.trim(); }
+
+  function preamble() {
+    var type = val('bg-type'), use = val('bg-use'), freq = val('bg-freq');
+    var budget = val('bg-budget'), city = val('bg-city'), extra = val('bg-extra');
+    var parts = [];
+    if (type || use || freq) {
+      parts.push('Je veux un ' + (type || '[type]') + ' pour ' + (use || '[usage]') +
+        ', utilisation ' + (freq || '[fréquence]') + '.');
+    }
+    if (budget) parts.push("Budget d'achat : " + budget + ' dhs.');
+    if (city) parts.push('Ville : ' + city + '.');
+    if (extra) parts.push('Précisions : ' + extra + '.');
+    return parts.join(' ');
+  }
+
+  function refresh() {
+    var p = preamble();
+    document.getElementById('bg-preview').textContent = p ? 'Message : « ' + p + ' »' : '';
+  }
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  document.addEventListener('input', function(e) {
+    if (e.target.id && e.target.id.indexOf('bg-') === 0) refresh();
+  });
+  document.addEventListener('change', function(e) {
+    if (e.target.id && e.target.id.indexOf('bg-') === 0) refresh();
+  });
+
+  document.getElementById('bg-copy').addEventListener('click', function() {
+    var p = preamble();
+    var text = (p ? 'MON BESOIN : ' + p + '\n\n' : '') + document.getElementById('bg-prompt').textContent;
+    var status = document.getElementById('bg-status');
+    function done(ok) { status.textContent = ok ? 'Copié ✓' : 'Copie impossible — sélectionnez le texte manuellement.'; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function() { done(true); }, function() { done(fallbackCopy(text)); });
+    } else {
+      done(fallbackCopy(text));
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

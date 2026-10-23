@@ -28,6 +28,7 @@ _Last synced: 2026-06-16 @ dc907d7_
 - `wiki/documents.html` — Opens the two official PDFs that came with the bike (driver's manual + maintenance passport) as cards with cover thumbnails and an on-demand inline PDF preview. Deliberately links files from `guides-docs/`.
 - `wiki/manuals.html` — External/reference index: user + workshop manuals (4T / 2T / 125), parts catalogs, Wayback backups, and local copies in `guides-docs/`.
 - `wiki/oil-systems.html` — Critical content: two separate oil systems (engine 10W-40 / gear 80W-90). Mixing them is the #1 user error.
+- `wiki/buying-guide.html` — "What to buy" page: usage questions (why / how often / with what), monthly cost-of-ownership formula, and a copyable AI advisor prompt (Moto Assistant) with a small inline ES5 form that prepends the user's need. Only page with its own inline `<script>`.
 - `wiki/failure-modes.html` — "What breaks first" ranked list (CVT rollers, pilot jet, …).
 - `wiki/diagnostics.html` — Design notes + live-PID table for the planned ESP32 + L9637D K-Line reader (not built). All K-Line / OBD content lives here now.
 - `wiki/guides.html`, `troubleshooting.html`, `parts.html`, `seasonal.html`, `pre-ride.html` — Reference content. Pure HTML, no logic.
